@@ -10,10 +10,10 @@ def index(request):
 
 
 def get_tweets(request):
-    if request.method == 'GET' and request.is_ajax():
-        form = forms.get_tweets_form(request.GET)
+    if request.method == 'POST' and request.is_ajax():
+        form = forms.get_tweets_form(request.POST)
         if form.is_valid():
-            username = request.username
+            username = form.cleaned_data['username']
             words = twitter_word_count.twitter_word_count(settings.API_TWITTER).get_words_of_tweets(username)
             return render(request, 'tweets_list.html', {'words': words})
         response = HttpResponse('El formulario no es valido')
