@@ -7,7 +7,6 @@ function get_last_tweets() {
         data: form.serialize(),
 
         success : function (response) {
-            console.log(response);
             document.getElementById('word_list').innerHTML = response;
         }
     })
