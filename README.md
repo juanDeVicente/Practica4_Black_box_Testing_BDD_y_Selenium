@@ -6,6 +6,10 @@ Repositorio para la práctica 4 de la asignatura de Verificación y desarrollo d
 <a href="https://github.com/Ayato27">Raúl Martínez</a><br>
 <a href="https://github.com/PaulaPascual">Paula Pascual</a><br>
 <a href="https://github.com/ClaudiaRodriguezM">Claudia Rodríguez</a>
+
+## Consideraciones
+Para poder ejecutar los tests es necesario tener instalado el navegador web <a href="https://www.mozilla.org/firefox/new/">Firefox</a>.
+
 ## Instrucciones de instalación
 1. Clonar el repositorio git.
 2. Instalar las librerias listadas en <a href="https://github.com/juanDeVicente/get_last_50_tweets/blob/master/requirements.txt">requirements.txt</a>
@@ -47,8 +51,6 @@ Repositorio para la práctica 4 de la asignatura de Verificación y desarrollo d
     
  ## Instrucciones para instalar selenium
  1. Ejecutar en consola python -m pip install selenium
- 
- ## Instalar Firefox
 
  ## Instrucciones para ejecutar el servidor de Django
  1. Abrir la terminal

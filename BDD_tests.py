@@ -10,8 +10,9 @@ def test_textbox_using_enter():
     textbox = context.find_element_by_id("username")
     textbox.send_keys('perezreverte')
     textbox.send_keys(Keys.ENTER)
-    time.sleep(2)
+    time.sleep(4)
     assert BDD.list_is_not_empty(context) == True
+
 
 def test_username_exists_execute_button():
     context = BDD.got_to_web()
@@ -22,6 +23,7 @@ def test_username_exists_execute_button():
     time.sleep(2)
     assert BDD.list_is_not_empty(context) == True
 
+
 def test_username_not_exists_execute_button():
     context = BDD.got_to_web()
     textbox = context.find_element_by_id("username")
@@ -29,6 +31,7 @@ def test_username_not_exists_execute_button():
     button = context.find_element_by_id("button_execute")
     button.click()
     assert BDD.list_is_not_empty(context) == False
+
 
 def test_delete_button_filled_textbox():
     context = BDD.got_to_web()
@@ -38,6 +41,7 @@ def test_delete_button_filled_textbox():
     button.click()
     time.sleep(2)
     assert BDD.textboxt_empty(context) == True
+
 
 def test_delete_button_filled_list():
     context = BDD.got_to_web()
@@ -50,6 +54,7 @@ def test_delete_button_filled_list():
     button2.click()
     time.sleep(2)
     assert BDD.list_is_not_empty(context) == False
+
 
 def test_empty_list_when_introduce_non_exist_twitter():
     context = BDD.got_to_web()
