@@ -55,6 +55,6 @@ Repositorio para la práctica 4 de la asignatura de Verificación y desarrollo d
  2. Ir a la ruta del proyecto
  3. Escribir en el terminal 
   ```
-    <rutaejecutablepython> <rutaproyecto>python manage.py runserver 8000
+    python manage.py runserver 8000
   ```
   Para más información consultar la documentación de Django https://docs.djangoproject.com/en/2.2/
