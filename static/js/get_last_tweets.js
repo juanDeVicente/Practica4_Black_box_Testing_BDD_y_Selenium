@@ -1,4 +1,5 @@
 function get_last_tweets() {
+    document.getElementById('word_list').innerHTML = '';
     var form = $('#report-form');
     event.preventDefault();
     $.ajax({
@@ -13,4 +14,5 @@ function get_last_tweets() {
 }
 function delete_last_tweets() {
     document.getElementById('word_list').innerHTML = '';
+    document.getElementById('username').value = '';
 }

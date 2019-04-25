@@ -11,20 +11,22 @@
     <script src="{% static 'js/get_last_tweets.js' %}"></script>
 </head>
 <body>
-    <h1>Practica4_Black_box_Testing_BDD_y_Selenium</h1>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
+            <h1>Practica4_Black_box_Testing_BDD_y_Selenium</h1>
             <form id="report-form" method="POST" action="{% url 'get_tweets' %}">
                 {% csrf_token %}
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Nombre de usuario de Twitter" id="username" name="username" maxlength="100" required>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="get_last_tweets()" id="button_execute">Exectue</button>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" id="button_delete" onclick="delete_last_tweets()">Delete</button>
+                    <button type="submit" class="btn btn-primary" onclick="get_last_tweets()" id="button_execute">Exectue</button>
+                </div>
             </form>
             <ul id="word_list">
             </ul>
-            <button type="button" class="btn btn-danger" id="button_delete" onclick="delete_last_tweets()">Delete</button>
         </div>
         <div class="col-2"></div>
     </div>
