@@ -42,11 +42,18 @@ Para poder ejecutar los tests es necesario tener instalado el navegador web <a h
     ```
     <rutaproyecto> Python -m pytest tests/twitter_word_count_test.py -v
     ```
-## Instrucciones para ejecutar las pruebas
+## Instrucciones para ejecutar las pruebas de twitter_word_count
 1. Abrir la terminal
 2. Ejecutar el siguiente comando para ejecutar la prueba de "twitter_word_count_test.py" con Arturo Pérez Reverte:
     ```
     <rutaejecutablepython> <rutaproyecto>/twitter_word_count.py
+    ```
+
+## Instrucciones para ejecutar las pruebas de la página web
+1. Abrir la terminal
+2. Ejecutar el siguiente comando para ejecutar la prueba de "twitter_word_count_test.py" con Arturo Pérez Reverte:
+    ```
+    <rutaproyecto>python pytest BDD_tests.py
     ```
     
  ## Instrucciones para instalar selenium
