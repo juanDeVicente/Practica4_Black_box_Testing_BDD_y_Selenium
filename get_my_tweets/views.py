@@ -14,7 +14,10 @@ def get_tweets(request):
         form = forms.get_tweets_form(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
-            words = twitter_word_count.twitter_word_count(settings.API_TWITTER).get_words_of_tweets(username)
+            try:
+                words = twitter_word_count.twitter_word_count(settings.API_TWITTER).get_words_of_tweets(username)
+            except:
+                return HttpResponse('La conexión con Twitter no está disponible')
             return render(request, 'tweets_list.html', {'words': words})
         response = HttpResponse('El formulario no es valido')
         response.status_code = 400
